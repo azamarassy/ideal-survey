@@ -4,6 +4,8 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+//Appコンポーネントをindex.htmlのルート要素にマウントし、その中にコンテンツをレンダリング
+//App.js内のコンポーネントのツリーが、実際のHTMLコードに変換されて表示される
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>

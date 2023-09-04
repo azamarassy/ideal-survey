@@ -18,7 +18,7 @@ const DecideComponent = ( props ) => {
     let output = 150 - input;
 
     if (output !== 0) {
-      alert("合計値が0でありません。");
+      alert("残りポイントが0でありません。");
       return;
     }
     //paramLabelsとkekkaTextという2つの配列を使用して、surveyDataという新しいオブジェクトを生成
@@ -49,17 +49,16 @@ const DecideComponent = ( props ) => {
        //------------------------------------------------------------------------------------
     }
     setDataArray(Object.entries(surveyData));
-    if(output === 0){
-      props.handleShowComponents(false);
-      props.handleShowComponents2(true);
-      props.handleShowComponents3(true);
-      props.handleShowAnswer2(true);
-      props.handleShowDecideButton(false);
+    if(output === 0){//残りポイントが0だったら表示切り替え
+      props.handleShowComponents(false);//説明文を非表示
+      props.handleShowComponents2(true);//リセットボタンを表示
+      props.handleShowComponents3(true);//結果ボタンを表示
+      props.handleShowAnswer2(true);//回答を表示
+      props.handleShowDecideButton(false);//確定ボタンを消す
     }
   };
 
-  const handleDecideClick = (event) => {
-    event.preventDefault();
+  const handleDecideClick = () => {
     showText();
   };
 

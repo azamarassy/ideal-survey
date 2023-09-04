@@ -53,7 +53,7 @@ const App = () => {
         setLeftPt(150);//残りポイントを150にする
 
         if (showComponents) {
-         document.getElementById('leftPt').textContent = "200";
+         document.getElementById('leftPt').textContent = "150";
         
          //フォームの入力内容を消してエラーメッセージも消す関数
         const clearForm = (i) => {
